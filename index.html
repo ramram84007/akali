@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>akali</title>
+    <title>Untitled</title>
     
 
   </head>
@@ -14,17 +14,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akali | The Rogue Assassin - Definitive Edition</title>
+<title>Akshan | The Rogue Sentinel - Definitive Edition</title>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-    --accent:#22c55e;
-    --bg:url("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg");
+    --accent:#22d3ee;
+    --bg:url("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akshan_0.jpg");
 }
-
 *{box-sizing:border-box;scroll-behavior:smooth}
-
 body{
     margin:0;
     font-family:'Prompt',sans-serif;
@@ -33,24 +31,7 @@ body{
         linear-gradient(rgba(2,6,23,.9),rgba(2,6,23,.9)),
         var(--bg) center/cover fixed;
     transition:.6s;
-    overflow-x:hidden;
-}
-
-/* ===== SMOKE BURST ===== */
-#smokeOverlay{
-    position:fixed;
-    inset:0;
-    background:
-        radial-gradient(circle at 50% 50%, rgba(34,197,94,.6), transparent 70%);
-    opacity:0;
-    pointer-events:none;
-    z-index:9999;
-}
-.smoke-anim{animation:smokeBurst 1.4s ease-out forwards}
-@keyframes smokeBurst{
-    0%{opacity:0;transform:scale(1)}
-    40%{opacity:1;transform:scale(1.15)}
-    100%{opacity:0;transform:scale(1.5)}
+    overflow-x: hidden;
 }
 
 /* ===== HEADER ===== */
@@ -59,7 +40,7 @@ body{
     font-size:72px;
     margin:0;
     color:var(--accent);
-    text-shadow:0 0 30px rgba(34,197,94,.6);
+    text-shadow:0 0 30px rgba(34,211,238,.6);
 }
 
 /* ===== UI ===== */
@@ -71,7 +52,6 @@ body{
     gap:15px;
     padding:0 20px;
 }
-
 .btn{
     padding:16px;
     border-radius:15px;
@@ -88,9 +68,7 @@ body{
     box-shadow:0 0 25px var(--accent);
 }
 .btn:disabled{opacity:.35;cursor:not-allowed}
-
 .lock-btn{width:220px;background:var(--accent);color:#020617}
-.profile-btn{width:220px}
 
 /* ===== CONTENT ===== */
 section{max-width:1100px;margin:auto;padding:60px 20px}
@@ -111,23 +89,19 @@ h2{
     width:100%;
     border-radius:30px;
     border:2px solid var(--accent);
-    box-shadow:0 0 40px rgba(0,0,0,.8);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
 .info-list p{
     font-size:1.1rem;
-    margin:15px 0;
     border-bottom:1px solid rgba(255,255,255,.1);
     padding-bottom:10px;
+    margin: 15px 0;
 }
 .info-list b{color:var(--accent)}
 
-/* เพิ่มสไตล์สำหรับหัวข้อ Lore */
-.lore-card h3 {
-    margin-top: 0;
-    color: var(--accent);
-    font-size: 1.5rem;
-}
+/* ===== LORE ===== */
+.lore-card h3 { color: var(--accent); margin-top: 0; }
 .lore-card{
     background:rgba(15,23,42,.55);
     border-left:5px solid var(--accent);
@@ -135,7 +109,6 @@ h2{
     margin-bottom:25px;
     border-radius:0 15px 15px 0;
     line-height:1.8;
-    font-size: 1.05rem;
 }
 
 /* ===== SKILLS ===== */
@@ -148,237 +121,191 @@ h2{
     background:#020617;
     border-radius:20px;
     padding:25px;
-    border:1px solid rgba(34,197,94,.2);
-    transition:.4s;
+    border:1px solid rgba(34,211,238,0.2);
+    transition: 0.4s;
 }
-.skill-card:hover{
-    transform:translateY(-10px);
-    border-color:var(--accent);
-    box-shadow:0 0 35px rgba(34,197,94,.35);
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 0 30px rgba(34,211,238,0.2);
 }
-
 .skill-header{
     display:flex;
-    align-items:center;
     gap:15px;
-    margin-bottom:15px;
+    align-items:center;
+    margin-bottom: 15px;
 }
 .skill-icon{
     width:60px;
     height:60px;
-    border:2px solid var(--accent);
     border-radius:10px;
+    border:2px solid var(--accent);
 }
 .skill-key{
-    font-size:28px;
+    font-size:26px;
     font-weight:800;
     color:var(--accent);
 }
-.skill-name{font-size:1.2rem;font-weight:600}
+.skill-name { font-weight: 600; font-size: 1.1rem; }
 
-.skill-video-container{
-    margin:15px 0;
-    border-radius:12px;
-    overflow:hidden;
-    background:#000;
-    border:1px solid rgba(255,255,255,.1);
+.skill-video-container {
+    margin: 15px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255,255,255,0.1);
+    line-height: 0;
 }
-.skill-video-container video{width:100%}
+.skill-video-container video { width: 100%; }
 
-.skill-desc{font-size:.95rem;line-height:1.6;opacity:.8}
+.skill-desc{opacity:.8; font-size: 0.95rem; line-height: 1.6;}
 
-footer{
-    text-align:center;
-    padding:80px;
-    background:#010409;
-    opacity:.7;
-}
+footer{text-align:center;padding:80px;background:#010409; opacity: 0.7;}
 </style>
 </head>
 
 <body>
 
-<div id="smokeOverlay"></div>
-
 <div class="header">
-    <h1>AKALI</h1>
-    <p style="letter-spacing:5px;opacity:.7;">THE ROGUE ASSASSIN</p>
+    <h1>AKSHAN</h1>
+    <p style="letter-spacing:5px;opacity:.7;">THE ROGUE SENTINEL</p>
 </div>
 
 <div class="skin-panel">
     <button class="btn" onclick="setSkin('classic')">Classic</button>
-    <button class="btn" onclick="setSkin('kda')">K/DA</button>
-    <button class="btn" onclick="setSkin('crime')">Crime City</button>
+    <button class="btn" onclick="setSkin('sentinel')">Sentinel</button>
+    <button class="btn" onclick="setSkin('cyber')">Cyber Pop</button>
 </div>
 
 <div style="text-align:center;padding-bottom:50px">
-    <button class="btn lock-btn" id="lockBtn" onclick="lockChampion()">LOCK IN</button>
-    <button class="btn profile-btn" id="viewBtn" disabled onclick="viewProfile()">VIEW PROFILE</button>
+    <button class="btn lock-btn" onclick="document.getElementById('profile').scrollIntoView()">VIEW PROFILE</button>
 </div>
 
-<div id="fullProfile" style="display:none">
-    
+<div id="profile">
+
 <section>
-    <h2>ข้อมูลตัวละคร</h2>
-    <div class="character-box">
-        <img id="mainImg" src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Akali_0.jpg">
-        <div class="info-list">
-            <p><b>ชื่อ:</b> Akali Jhomen Tethi</p>
-            <p><b>เผ่า:</b> มนุษย์</p>
-            <p><b>ถิ่นกำเนิด:</b> Ionia (ภาคี Kinkou)</p>
-            <p><b>บทบาท:</b> Assassin (มือสังหาร)</p>
-            <p><b>อาวุธ:</b> Kama (เคียว) & Kunai (มีดบิน)</p>
-            <p><b>ฉายา:</b> มือสังหารไร้นาย (The Rogue Assassin)</p>
-        </div>
-    </div>
+<h2>ข้อมูลตัวละคร</h2>
+<div class="character-box">
+<img id="mainImg" src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Akshan_0.jpg">
+<div class="info-list">
+<p><b>ชื่อ:</b> Akshan</p>
+<p><b>ถิ่นกำเนิด:</b> Shurima</p>
+<p><b>บทบาท:</b> Marksman / Assassin</p>
+<p><b>อาวุธ:</b> Absolver (ปืนศักดิ์สิทธิ์โบราณ)</p>
+<p><b>ฉายา:</b> The Rogue Sentinel (มือสังหารนอกคอก)</p>
+</div>
+</div>
 </section>
 
 <section>
-    <h2>ตำนานและประวัติศาสตร์ (Lore)</h2>
-    
-    <div class="lore-card">
-        <h3>กำเนิดแห่งเงา (The Kinkou Order)</h3>
-        <p>
-            Akali Jhomen Tethi เกิดในภาคี Kinkou กลุ่มนินจาโบราณที่มีหน้าที่รักษาสมดุลทางจิตวิญญาณของ Ionia แม่ของเธอคือ <b>Mayym Jhomen Tethi</b> ผู้ดำรงตำแหน่ง "Fist of Shadow" (หัตถ์แห่งเงา) Akali ถูกฝึกฝนมาตั้งแต่เด็กเพื่อสืบทอดตำแหน่งนี้ ภายใต้การดูแลของ <b>Shen</b> ผู้นำกลุ่ม Kinkou เธอเรียนรู้เวทมนตร์และเพลงหมัดมวยอย่างรวดเร็ว กลายเป็นศิษย์เอกที่มีพรสวรรค์
-        </p>
-    </div>
-
-    <div class="lore-card">
-        <h3>รอยร้าวในอุดมการณ์ (Conflict of Balance)</h3>
-        <p>
-            เมื่อ Ionia ถูกรุกรานโดยจักรวรรดิ Noxus Akali เริ่มตั้งคำถามกับหลักปรัชญาของ Kinkou ที่เน้น "ความสมดุล" และการไม่แทรกแซง ในขณะที่ Shen เลือกที่จะทำสมาธิและรักษาสมดุลของโลกวิญญาณ Akali กลับเห็นผู้คนบริสุทธิ์ถูกสังหาร เธอทนเห็นศัตรูหนีรอดไปเพียงเพื่อรักษาสมดุลไม่ได้อีกต่อไป สำหรับเธอ ความสมดุลที่แท้จริงคือการกำจัดศัตรูให้สิ้นซาก
-        </p>
-    </div>
-
-    <div class="lore-card">
-        <h3>มือสังหารไร้นาย (The Rogue Assassin)</h3>
-        <p>
-            Akali ประกาศแยกตัวออกจากภาคี Kinkou อย่างเป็นทางการ เธอกลายเป็นมือสังหารพเนจรที่ไม่ขึ้นตรงต่อใคร ไม่มีเจ้านาย ไม่มีกฎเกณฑ์เดิมๆ ผูกมัด เธอเปลี่ยนจากการตัดแต่งกิ่งไม้แห่งสมดุล เป็นการขุดรากถอนโคนความชั่วร้ายด้วยคมมีด Kama และ Kunai ของเธอเอง แม้เธอจะเดินคนละเส้นทางกับ Shen แต่เป้าหมายในการปกป้อง Ionia ยังคงเหมือนเดิม เพียงแต่วิธีการของเธอนั้น... เด็ดขาดและนองเลือดกว่ามาก
-        </p>
-    </div>
+<h2>ตำนานแห่งมือสังหารนอกรีต (Detailed Lore)</h2>
+<div class="lore-card">
+    <h3>ชีวิตที่สองและการล้างแค้น</h3>
+    <p>Akshan เติบโตขึ้นมาในฐานะเด็กข้างถนนใน Shurima เขาเกือบจะตายจากการถูกทำร้าย แต่ได้รับการช่วยเหลือจาก <b>Shadya</b> มือปราบ Sentinel of Light ผู้ใช้ปืนศักดิ์สิทธิ์ <b>Absolver</b> ชุบชีวิตเขาขึ้นมา เธอสอนให้เขารู้จักการต่อสู้และอุดมการณ์ของ Sentinel</p>
+</div>
+<div class="lore-card">
+    <h3>ปืน Absolver และกฎแห่ง Scoundrel</h3>
+    <p>เมื่อ Shadya ถูกลอบสังหาร Akshan ได้ขโมยปืน Absolver มาเพื่อตามล่าฆาตกร ปืนกระบอกนี้มีความลับที่น่าเหลือเชื่อ: <b>หากผู้ใช้สังหารคนที่ฆ่าใครบางคนไป เหยื่อผู้เคราะห์ร้ายคนนั้นจะฟื้นคืนชีพกลับมา</b> Akshan จึงออกเดินทางในฐานะ Sentinel นอกคอก เพื่อมอบความยุติธรรมและ "ชุบชีวิต" ผู้บริสุทธิ์กลับมาจากความตาย</p>
+</div>
 </section>
 
 <section>
-    <h2>ทักษะ (Abilities)</h2>
-    <div class="skills-grid">
+<h2>Abilities</h2>
+<div class="skills-grid">
 
-        <div class="skill-card">
-            <div class="skill-header">
-                <img class="skill-icon" src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/passive/Akali_Passive.png">
-                <div>
-                    <div class="skill-key" style="font-size:18px">PASSIVE</div>
-                    <div class="skill-name">Assassin's Mark</div>
-                </div>
-            </div>
-            <div class="skill-video-container">
-                <video autoplay loop muted playsinline>
-                    <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0084/ability_0084_P1.mp4">
-                </video>
-            </div>
-            <div class="skill-desc">การโจมตีสกิลใส่แชมเปี้ยนจะสร้างวงแหวน หาก Akali ออกจากวงแหวน จะเพิ่มระยะและดาเมจการโจมตีครั้งถัดไป</div>
-        </div>
+<div class="skill-card">
+<div class="skill-header">
+<img class="skill-icon" src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/passive/Akshan_P.png">
+<div><div class="skill-key">P</div><div class="skill-name">Dirty Fighting</div></div>
+</div>
+<div class="skill-video-container">
+    <video autoplay loop muted playsinline>
+        <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0166/ability_0166_P1.mp4">
+    </video>
+</div>
+<div class="skill-desc">การโจมตีครั้งที่ 3 จะสร้างโบนัสดาเมจและมอบโล่ป้องกัน หาก Akshan ไม่ยิงครั้งที่สอง เขาจะเดินเร็วขึ้น</div>
+</div>
 
-        <div class="skill-card">
-            <div class="skill-header">
-                <img class="skill-icon" src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/AkaliQ.png">
-                <div><div class="skill-key">Q</div><div class="skill-name">Five Point Strike</div></div>
-            </div>
-            <div class="skill-video-container">
-                <video autoplay loop muted playsinline>
-                    <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0084/ability_0084_Q1.mp4">
-                </video>
-            </div>
-            <div class="skill-desc">ปามีด Kunai 5 เล่มเป็นแนวโค้ง สร้างความเสียหายเวทและสโลว์ศัตรูที่ปลายมีด</div>
-        </div>
+<div class="skill-card">
+<div class="skill-header">
+<img class="skill-icon" src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/AkshanQ.png">
+<div><div class="skill-key">Q</div><div class="skill-name">Avengerang</div></div>
+</div>
+<div class="skill-video-container">
+    <video autoplay loop muted playsinline>
+        <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0166/ability_0166_Q1.mp4">
+    </video>
+</div>
+<div class="skill-desc">ขว้างบูมเมอแรงที่ขยายระยะออกไปทุกครั้งที่โดนศัตรู เผยตำแหน่งและสร้างความเสียหายทั้งไปและกลับ</div>
+</div>
 
-        <div class="skill-card">
-            <div class="skill-header">
-                <img class="skill-icon" src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/AkaliW.png">
-                <div><div class="skill-key">W</div><div class="skill-name">Twilight Shroud</div></div>
-            </div>
-            <div class="skill-video-container">
-                <video autoplay loop muted playsinline>
-                    <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0084/ability_0084_W1.mp4">
-                </video>
-            </div>
-            <div class="skill-desc">ระเบิดควันออกมา สร้างพื้นที่ที่ทำให้ Akali หายตัว เพิ่มความเร็วเคลื่อนที่ และฟื้นฟู Energy</div>
-        </div>
+<div class="skill-card">
+<div class="skill-header">
+<img class="skill-icon" src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/AkshanW.png">
+<div><div class="skill-key">W</div><div class="skill-name">Going Rogue</div></div>
+</div>
+<div class="skill-video-container">
+    <video autoplay loop muted playsinline>
+        <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0166/ability_0166_W1.mp4">
+    </video>
+</div>
+<div class="skill-desc"><b>Passive:</b> ศัตรูที่ฆ่าพันธมิตรจะกลายเป็น Scoundrel หาก Akshan ฆ่าพวกเขาได้ พันธมิตรจะฟื้นคืนชีพที่ฐานทันที<br><b>Active:</b> ล่องหนชั่วขณะ</div>
+</div>
 
-        <div class="skill-card">
-            <div class="skill-header">
-                <img class="skill-icon" src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/AkaliE.png">
-                <div><div class="skill-key">E</div><div class="skill-name">Shuriken Flip</div></div>
-            </div>
-            <div class="skill-video-container">
-                <video autoplay loop muted playsinline>
-                    <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0084/ability_0084_E1.mp4">
-                </video>
-            </div>
-            <div class="skill-desc">ตีลังกากลับหลังพร้อมปาดาวกระจาย หากโดนศัตรูหรือควัน สามารถกดซ้ำเพื่อพุ่งเข้าไปหาเป้าหมายได้</div>
-        </div>
+<div class="skill-card">
+<div class="skill-header">
+<img class="skill-icon" src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/AkshanE.png">
+<div><div class="skill-key">E</div><div class="skill-name">Heroic Swing</div></div>
+</div>
+<div class="skill-video-container">
+    <video autoplay loop muted playsinline>
+        <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0166/ability_0166_E1.mp4">
+    </video>
+</div>
+<div class="skill-desc">ยิงเชือกเกี่ยวสิ่งก่อสร้างเพื่อโหนตัวเป็นวงกลม ระหว่างโหนจะยิงศัตรูที่อยู่ใกล้ที่สุดอย่างรวดเร็ว</div>
+</div>
 
-        <div class="skill-card">
-            <div class="skill-header">
-                <img class="skill-icon" src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/AkaliR.png">
-                <div><div class="skill-key">R</div><div class="skill-name">Perfect Execution</div></div>
-            </div>
-            <div class="skill-video-container">
-                <video autoplay loop muted playsinline>
-                    <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0084/ability_0084_R1.mp4">
-                </video>
-            </div>
-            <div class="skill-desc">พุ่งตัว 2 ครั้ง: ครั้งแรกข้ามตัวศัตรูสตั๊นสั้นๆ (กายภาพ), ครั้งที่สองพุ่งปิดบัญชี สร้างดาเมจตามเลือดที่หายไป (เวท)</div>
-        </div>
+<div class="skill-card">
+<div class="skill-header">
+<img class="skill-icon" src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/spell/AkshanR.png">
+<div><div class="skill-key">R</div><div class="skill-name">Comeuppance</div></div>
+</div>
+<div class="skill-video-container">
+    <video autoplay loop muted playsinline>
+        <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0166/ability_0166_R1.mp4">
+    </video>
+</div>
+<div class="skill-desc">ล็อกเป้าหมายแชมเปี้ยนศัตรูเพื่อชาร์จกระสุน จากนั้นกระหน่ำยิงกระสุนศักดิ์สิทธิ์หลายนัด ดาเมจแรงขึ้นตามเลือดที่หายไปของศัตรู</div>
+</div>
 
-    </div>
+</div>
 </section>
 
 <footer>
-    <button class="btn" onclick="window.scrollTo(0,0)">BACK TO TOP</button>
-    <p style="margin-top:30px;">League of Legends © Riot Games</p>
+<p>League of Legends © Riot Games</p>
 </footer>
+
 </div>
 
 <script>
-const overlay=document.getElementById("smokeOverlay")
-const profile=document.getElementById("fullProfile")
-const lockBtn=document.getElementById("lockBtn")
-const viewBtn=document.getElementById("viewBtn")
-
 function setSkin(type){
-    const root=document.documentElement
-    const img=document.getElementById("mainImg")
-    if(type==="classic"){
-        root.style.setProperty("--accent","#22c55e")
-        root.style.setProperty("--bg","url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg')")
-        img.src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Akali_0.jpg"
-    }
-    if(type==="kda"){
-        root.style.setProperty("--accent","#a855f7")
-        root.style.setProperty("--bg","url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_32.jpg')")
-        img.src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Akali_32.jpg"
-    }
-    if(type==="crime"){
-        root.style.setProperty("--accent","#22d3ee")
-        root.style.setProperty("--bg","url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_15.jpg')")
-        img.src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Akali_15.jpg"
-    }
+const root=document.documentElement
+const img=document.getElementById("mainImg")
+if(type==="classic"){
+root.style.setProperty("--accent","#22d3ee")
+root.style.setProperty("--bg","url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akshan_0.jpg')")
+img.src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Akshan_0.jpg"
 }
-
-function lockChampion(){
-    lockBtn.innerText="CHAMPION LOCKED"
-    lockBtn.disabled=true
-    viewBtn.disabled=false
+if(type==="sentinel"){
+root.style.setProperty("--accent","#facc15")
+root.style.setProperty("--bg","url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akshan_1.jpg')")
+img.src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Akshan_1.jpg"
 }
-
-function viewProfile(){
-    overlay.classList.remove("smoke-anim")
-    void overlay.offsetWidth
-    overlay.classList.add("smoke-anim")
-    setTimeout(()=>{
-        profile.style.display="block"
-        profile.scrollIntoView({behavior:"smooth"})
-    },800)
+if(type==="cyber"){
+root.style.setProperty("--accent","#38bdf8")
+root.style.setProperty("--bg","url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akshan_2.jpg')")
+img.src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Akshan_2.jpg"
+}
 }
 </script>
 
